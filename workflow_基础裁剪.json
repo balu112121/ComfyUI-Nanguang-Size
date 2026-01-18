@@ -1,0 +1,87 @@
+{
+  "last_node_id": 4,
+  "last_link_id": 3,
+  "nodes": [
+    {
+      "id": 1,
+      "type": "LoadImage",
+      "pos": [200, 200],
+      "size": {"0": 315, "1": 262},
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {"name": "IMAGE", "type": "IMAGE", "links": [2], "slot_index": 0}
+      ],
+      "properties": {},
+      "widgets_values": []
+    },
+    {
+      "id": 2,
+      "type": "NanguangCrop",
+      "pos": [600, 200],
+      "size": {"0": 320, "1": 500},
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {"name": "图像", "type": "IMAGE", "link": 1}
+      ],
+      "outputs": [
+        {"name": "裁剪图像", "type": "IMAGE", "links": [3], "slot_index": 0},
+        {"name": "宽度", "type": "INT", "links": [], "slot_index": 1},
+        {"name": "高度", "type": "INT", "links": [], "slot_index": 2},
+        {"name": "处理信息", "type": "STRING", "links": [4], "slot_index": 3}
+      ],
+      "properties": {},
+      "widgets_values": ["开启", "居中", 512, 512, 0, 0]
+    },
+    {
+      "id": 3,
+      "type": "PreviewImage",
+      "pos": [1000, 200],
+      "size": {"0": 400, "1": 400},
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {"name": "images", "type": "IMAGE", "link": 2}
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": []
+    },
+    {
+      "id": 4,
+      "type": "Note",
+      "pos": [600, 750],
+      "size": {"0": 400, "1": 200},
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {"name": "text", "type": "STRING", "link": 2}
+      ],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": ["裁剪信息将显示在这里"]
+    }
+  ],
+  "links": [
+    [1, 0, 2, 0, 0, 0],
+    [2, 0, 3, 0, 0, 0],
+    [2, 3, 4, 0, 0, 0]
+  ],
+  "groups": [
+    {
+      "title": "南光尺寸裁剪示例工作流",
+      "bounding": [180, 180, 1250, 800],
+      "color": "#1890ff",
+      "font_size": 16
+    }
+  ],
+  "config": {},
+  "extra": {},
+  "version": 0.4
+}

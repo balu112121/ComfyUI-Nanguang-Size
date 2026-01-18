@@ -1,0 +1,13 @@
+ComfyUI-Nanguang-Size/
+├── __init__.py                      # 插件主入口
+├── nanguang_crop_node.py           # 节点核心实现
+├── web/
+│   ├── nanguang_crop.js            # Web界面增强
+│   └── nanguang_crop.css           # 样式文件
+├── icons/
+│   └── nanguang.png                # 插件图标
+├── examples/
+│   └── workflow_基础裁剪.json       # 工作流示例
+├── README_CN.md                     # 中文说明文档
+├── LICENSE                          # MIT许可证
+└── 南光尺寸插件使用教程.txt         # 快速使用指南

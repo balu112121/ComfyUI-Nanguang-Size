@@ -1,0 +1,129 @@
+/* 南光尺寸裁剪插件样式 */
+
+/* 节点基础样式 */
+.comfy-node[data-node-type="NanguangCrop"] {
+    --nanguang-primary: #1890ff;
+    --nanguang-secondary: #36cfc9;
+    --nanguang-bg: #f8f9fa;
+    --nanguang-border: #e8e8e8;
+    --nanguang-text: #333;
+}
+
+/* 输入输出连接点 */
+.comfy-node[data-node-type="NanguangCrop"] .litegraph.litegraph-node .input > .label,
+.comfy-node[data-node-type="NanguangCrop"] .litegraph.litegraph-node .output > .label {
+    font-family: 'Microsoft YaHei', sans-serif;
+    font-size: 11px;
+    color: #666;
+}
+
+/* 下拉选项样式 */
+.comfy-node[data-node-type="NanguangCrop"] select option {
+    font-family: 'Microsoft YaHei', sans-serif;
+    padding: 8px;
+    background: white;
+}
+
+/* 滑块数值显示 */
+.comfy-node[data-node-type="NanguangCrop"] .widget-slider .slider-value {
+    font-family: 'Microsoft YaHei', sans-serif;
+    font-size: 11px;
+    color: #1890ff;
+    font-weight: bold;
+    min-width: 50px;
+    text-align: right;
+}
+
+/* 鼠标悬停效果 */
+.comfy-node[data-node-type="NanguangCrop"]:hover {
+    box-shadow: 0 4px 12px rgba(24, 144, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* 裁剪类型选项的特殊样式 */
+.comfy-node[data-node-type="NanguangCrop"] select[name="裁剪类型"] option {
+    position: relative;
+    padding-left: 20px;
+}
+
+.comfy-node[data-node-type="NanguangCrop"] select[name="裁剪类型"] option[value="左顶"]::before {
+    content: "↖️";
+    margin-right: 5px;
+}
+
+.comfy-node[data-node-type="NanguangCrop"] select[name="裁剪类型"] option[value="顶中"]::before {
+    content: "⬆️";
+    margin-right: 5px;
+}
+
+.comfy-node[data-node-type="NanguangCrop"] select[name="裁剪类型"] option[value="右顶"]::before {
+    content: "↗️";
+    margin-right: 5px;
+}
+
+.comfy-node[data-node-type="NanguangCrop"] select[name="裁剪类型"] option[value="左中"]::before {
+    content: "⬅️";
+    margin-right: 5px;
+}
+
+.comfy-node[data-node-type="NanguangCrop"] select[name="裁剪类型"] option[value="居中"]::before {
+    content: "📍";
+    margin-right: 5px;
+}
+
+.comfy-node[data-node-type="NanguangCrop"] select[name="裁剪类型"] option[value="右中"]::before {
+    content: "➡️";
+    margin-right: 5px;
+}
+
+.comfy-node[data-node-type="NanguangCrop"] select[name="裁剪类型"] option[value="左底"]::before {
+    content: "↙️";
+    margin-right: 5px;
+}
+
+.comfy-node[data-node-type="NanguangCrop"] select[name="裁剪类型"] option[value="底中"]::before {
+    content: "⬇️";
+    margin-right: 5px;
+}
+
+.comfy-node[data-node-type="NanguangCrop"] select[name="裁剪类型"] option[value="右底"]::before {
+    content: "↘️";
+    margin-right: 5px;
+}
+
+/* 裁剪开关样式 */
+.comfy-node[data-node-type="NanguangCrop"] select[name="裁剪开关"] option[value="开启"] {
+    color: #52c41a;
+    font-weight: bold;
+}
+
+.comfy-node[data-node-type="NanguangCrop"] select[name="裁剪开关"] option[value="关闭"] {
+    color: #ff4d4f;
+    font-weight: bold;
+}
+
+/* 数字输入框焦点样式 */
+.comfy-node[data-node-type="NanguangCrop"] input[type="number"]:focus {
+    border-color: #1890ff;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+    outline: none;
+}
+
+/* 信息显示区域滚动条样式 */
+.nanguang-info::-webkit-scrollbar {
+    width: 4px;
+}
+
+.nanguang-info::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 2px;
+}
+
+.nanguang-info::-webkit-scrollbar-thumb {
+    background: #1890ff;
+    border-radius: 2px;
+}
+
+.nanguang-info::-webkit-scrollbar-thumb:hover {
+    background: #40a9ff;
+}
